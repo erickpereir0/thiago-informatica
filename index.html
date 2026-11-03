@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thiago Informática | Versão Bootstrap</title>
+  <link rel="icon" href="recursos/imagens/marca.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script defer src="js/aplicacao.js"></script>
+</head>
+<body>
+  <div class="bg-light border-bottom py-2">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span>Versão atual: <strong>Bootstrap</strong></span>
+      <a class="btn btn-outline-primary btn-sm" href="tailwind/index.html">Abrir versão Tailwind CSS</a>
+    </div>
+  </div>
+  <header id="inicio">
+
+      
+    <nav class="navbar navbar-expand-md navbar-dark fundo-roxo" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio"><img src="recursos/imagens/marca.svg" width="32" height="32" alt=""> Thiago Informática</a>
+        <button class="navbar-toggler" id="alternar-menu" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir ou fechar menu"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#catalogo">Catálogo</a>
+            <a class="nav-link" href="#compatibilidade">Compatibilidade</a>
+            <a class="nav-link" href="#orcamento">Orçamento</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container py-4">
+
+      
+    <section class="mb-5" aria-label="Destaques da loja">
+      <div id="carrossel" class="carousel slide" data-bs-interval="false" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Destaques">
+        <div class="carousel-inner border rounded bg-white">
+          <div class="carousel-item active" role="group" aria-label="1 de 3">
+            <div class="row align-items-center p-4">
+              <div class="col-md-6"><h1>Monte seu computador</h1><p>Peças para estudar, trabalhar e jogar.</p></div>
+              <div class="col-md-6"><img class="foto-destaque" src="recursos/imagens/gabinete-gamer.jpg" alt="Gabinete gamer com computador montado" width="400" height="400"></div>
+            </div>
+          </div>
+          <div class="carousel-item" role="group" aria-label="2 de 3">
+            <div class="row align-items-center p-4">
+              <div class="col-md-6"><h2>Escolha seu processador</h2><p>Encontre as peças para começar seu setup.</p></div>
+              <div class="col-md-6"><img class="foto-destaque" src="recursos/imagens/processador-intel-core-i7.jpg" alt="Processador Intel Core i7" width="400" height="400"></div>
+            </div>
+          </div>
+          <div class="carousel-item" role="group" aria-label="3 de 3">
+            <div class="row align-items-center p-4">
+              <div class="col-md-6"><h2>Cuide da refrigeração</h2><p>Ventoinhas e water cooler para seu computador.</p></div>
+              <div class="col-md-6"><img class="foto-destaque" src="recursos/imagens/water-cooler-rgb.jpg" alt="Water cooler RGB" width="400" height="400"></div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-3">
+          <button class="btn btn-outline-secondary" type="button" data-bs-target="#carrossel" data-bs-slide="prev">Anterior</button>
+          <div class="carousel-indicators position-static m-0">
+            <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Destaque 1"></button>
+            <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Destaque 2"></button>
+            <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2" aria-label="Destaque 3"></button>
+          </div>
+          <button class="btn btn-outline-secondary" type="button" data-bs-target="#carrossel" data-bs-slide="next">Próximo</button>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="catalogo" class="mb-5" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo de peças</h2>
+      <p>Escolha uma peça para conhecer os detalhes.</p>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+        <div class="col">
+          <article class="card h-100" data-produto="p1">
+            <img class="card-img-top foto-produto" src="recursos/imagens/processador-intel-core-i7.jpg" alt="Processador Intel Core i7" width="400" height="400" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5">Processador Intel Core i7</h3>
+              <p class="descricao">Processador para montar ou atualizar seu computador.</p>
+              <p class="valor fw-bold">Valor: R$ 1.299,90</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-produto" aria-label="Detalhes: Processador Intel Core i7">Detalhes</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100" data-produto="p2">
+            <img class="card-img-top foto-produto" src="recursos/imagens/kit-ventoinhas-rgb.jpg" alt="Kit de ventoinhas RGB" width="400" height="400" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5">Kit de ventoinhas RGB</h3>
+              <p class="descricao">Três ventoinhas com iluminação RGB para o gabinete.</p>
+              <p class="valor fw-bold">Valor: R$ 129,90</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-produto" aria-label="Detalhes: Kit de ventoinhas RGB">Detalhes</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100" data-produto="p3">
+            <img class="card-img-top foto-produto" src="recursos/imagens/placa-mae.jpg" alt="Placa-mãe" width="400" height="400" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5">Placa-mãe</h3>
+              <p class="descricao">Conecta o processador, a memória e os outros componentes.</p>
+              <p class="valor fw-bold">Valor: R$ 899,90</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-produto" aria-label="Detalhes: Placa-mãe">Detalhes</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100" data-produto="p4">
+            <img class="card-img-top foto-produto" src="recursos/imagens/fonte-atx.jpg" alt="Fonte ATX" width="400" height="400" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5">Fonte ATX</h3>
+              <p class="descricao">Alimentação para os componentes do computador.</p>
+              <p class="valor fw-bold">Valor: R$ 349,90</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-produto" aria-label="Detalhes: Fonte ATX">Detalhes</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100" data-produto="p5">
+            <img class="card-img-top foto-produto" src="recursos/imagens/memoria-ram.jpg" alt="Memória RAM" width="400" height="400" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5">Memória RAM</h3>
+              <p class="descricao">Memória para os programas e as tarefas do dia a dia.</p>
+              <p class="valor fw-bold">Valor: R$ 199,90</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-produto" aria-label="Detalhes: Memória RAM">Detalhes</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100" data-produto="p6">
+            <img class="card-img-top foto-produto" src="recursos/imagens/water-cooler-rgb.jpg" alt="Water cooler RGB" width="400" height="400" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5">Water cooler RGB</h3>
+              <p class="descricao">Refrigeração líquida com iluminação RGB.</p>
+              <p class="valor fw-bold">Valor: R$ 399,90</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-produto" aria-label="Detalhes: Water cooler RGB">Detalhes</button>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100" data-produto="p7">
+            <img class="card-img-top foto-produto" src="recursos/imagens/gabinete-gamer.jpg" alt="Gabinete gamer" width="400" height="400" loading="lazy">
+            <div class="card-body">
+              <h3 class="h5">Gabinete gamer</h3>
+              <p class="descricao">Gabinete para organizar as peças do seu setup.</p>
+              <p class="valor fw-bold">Valor: R$ 499,90</p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-produto" aria-label="Detalhes: Gabinete gamer">Detalhes</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="compatibilidade" class="mb-5" aria-labelledby="titulo-tabela">
+      <h2 id="titulo-tabela">Compare as peças</h2>
+      <div class="table-responsive" tabindex="0" role="region" aria-label="Tabela de peças">
+        <table class="table table-striped table-bordered bg-white">1
+          <thead><tr><th scope="col">Produto</th><th scope="col">Categoria</th><th scope="col">Valor</th><th scope="col">O que conferir</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Processador Intel Core i7</th><td>Processadores</td><td>R.299,90</td><td>Socket da placa-mãe</td></tr>
+            <tr><th scope="row">Kit de ventoinhas RGB</th><td>Refrigeração</td><td>R$ 129,90</td><td>Tamanho e conectores</td></tr>
+            <tr><th scope="row">Placa-mãe</th><td>Placas-mãe</td><td>R$ 899,90</td><td>Socket e tipo de memória</td></tr>
+            <tr><th scope="row">Fonte ATX</th><td>Fontes</td><td>R$ 349,90</td><td>Potência e conectores</td></tr>
+            <tr><th scope="row">Memória RAM</th><td>Memórias</td><td>R$ 199,90</td><td>Geração e slots da placa</td></tr>
+            <tr><th scope="row">Water cooler RGB</th><td>Refrigeração</td><td>R$ 399,90</td><td>Socket e espaço do radiador</td></tr>
+            <tr><th scope="row">Gabinete gamer</th><td>Gabinetes</td><td>R$ 499,90</td><td>Formato da placa-mãe</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    
+    <section id="orcamento" class="mb-4" aria-labelledby="titulo-orcamento">
+      <h2 id="titulo-orcamento">Monte seu orçamento</h2>
+      <form id="formulario-orcamento" class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="nome">Nome</label>
+          <input class="form-control" id="nome" name="nome" required minlength="2" autocomplete="name">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="email">E-mail</label>
+          <input class="form-control" id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="setup">Seu computador ou objetivo</label>
+          <input class="form-control" id="setup" name="setup" required placeholder="Ex.: computador para estudar">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="peca">Peça de interesse</label>
+          <select class="form-select" id="peca" name="peca" required>
+            <option value="">Selecione uma peça</option>
+            <option>Processador Intel Core i7</option>
+            <option>Kit de ventoinhas RGB</option>
+            <option>Placa-mãe</option>
+            <option>Fonte ATX</option>
+            <option>Memória RAM</option>
+            <option>Water cooler RGB</option>
+            <option>Gabinete gamer</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="mensagem">Mensagem</label>
+          <textarea class="form-control" id="mensagem" name="mensagem" rows="3" required minlength="10"></textarea>
+        </div>
+        <div class="col-12"><button class="btn btn-primary" type="submit">Revisar orçamento</button></div>
+      </form>
+      <p id="retorno-orcamento" class="alert alert-success mt-3" role="status" hidden></p>
+    </section>
+  </main>
+  <footer class="fundo-roxo text-center py-3"><p class="mb-0">© 2026 Thiago Informática</p></footer>
+
+  
+  <div class="modal fade" id="modal-produto" tabindex="-1" aria-labelledby="titulo-modal-produto" aria-describedby="descricao-modal-produto" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="titulo-modal-produto">Detalhes da peça</h2>
+        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Fechar detalhes"></button>
+      </div>
+      <div class="modal-body">
+        <img id="imagem-modal-produto" class="foto-produto mb-3" src="recursos/imagens/processador-intel-core-i7.jpg" alt="">
+        <p id="descricao-modal-produto"></p><p id="preco-modal-produto" class="fw-bold"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Fechar</button>
+        <button class="btn btn-primary" id="orcamento-produto" type="button" data-bs-dismiss="modal">Adicionar ao orçamento</button>
+      </div>
+    </div></div>
+  </div>
+</body>
+</html>

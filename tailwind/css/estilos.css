@@ -1,0 +1,19 @@
+/* Ajustes pequenos que complementam as classes do Tailwind. */
+:focus-visible {
+  outline: 3px solid #a855f7;
+  outline-offset: 3px;
+}
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+dialog::backdrop {
+  background: rgb(20 10 35 / 65%);
+}
+@media (prefers-reduced-motion: reduce) {
+  #faixa-slides {
+    transition: none;
+  }
+}

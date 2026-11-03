@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Componentes de informática para seu computador. Conheça o catálogo da Thiago Informática e prepare seu orçamento." />
+  <title>Thiago Informática | Tailwind CSS</title>
+  <link rel="icon" href="../recursos/imagens/marca.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="js/aplicacao.js" defer></script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:bg-white focus:p-3">Pular para o conteúdo</a>
+  <div class="bg-purple-950 text-white">
+    <div class="mx-auto flex max-w-7xl flex-wrap justify-between gap-2 px-5 py-3 text-sm">
+      <p>Versão atual: Tailwind CSS</p>
+      <a href="../index.html" class="underline underline-offset-4">Abrir versão Bootstrap</a>
+    </div>
+  </div>
+
+  
+  <header id="inicio" class="border-b border-slate-200 bg-white">
+    <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-5" aria-label="Navegação principal">
+      <a href="#inicio" class="flex items-center gap-3 text-xl font-bold text-purple-900">
+        <img src="../recursos/imagens/marca.svg" alt="" width="40" height="40" />
+        Thiago Informática
+      </a>
+      <button id="alternar-menu" type="button" aria-controls="menu-principal" aria-expanded="false" class="rounded-lg border border-purple-300 px-3 py-2 text-purple-900 md:hidden">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <ul id="menu-principal" class="hidden w-full flex-col gap-4 font-medium md:flex md:w-auto md:flex-row md:gap-7">
+        <li><a href="#catalogo" class="hover:text-purple-700">Catálogo</a></li>
+        <li><a href="#compatibilidade" class="hover:text-purple-700">Compatibilidade</a></li>
+        <li><a href="#orcamento" class="hover:text-purple-700">Orçamento</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="conteudo" class="mx-auto max-w-7xl px-5 py-10">
+    <h1 class="text-3xl font-bold text-purple-950 sm:text-4xl">Peças para o seu próximo setup</h1>
+    <p class="mt-3 max-w-2xl text-slate-600">Encontre componentes para montar, renovar e cuidar do seu computador.</p>
+
+    
+    <section id="carrossel" aria-label="Destaques da loja" aria-roledescription="carrossel" class="mt-8 overflow-hidden rounded-2xl border border-purple-200 bg-purple-100">
+      <div id="faixa-slides" class="flex transition-transform duration-500 ease-in-out" aria-live="polite">
+        <div data-slide role="group" aria-label="1 de 3" class="min-w-full shrink-0 p-7 sm:p-10">
+          <p class="text-sm font-semibold text-purple-700">MONTE SEU COMPUTADOR</p>
+          <h2 class="mt-3 text-2xl font-bold text-purple-950">O próximo upgrade começa aqui.</h2>
+          <p class="mt-3 max-w-xl">Processador, memória e placa-mãe para planejar seu computador peça por peça.</p>
+        </div>
+        <div data-slide role="group" aria-label="2 de 3" aria-hidden="true" class="min-w-full shrink-0 p-7 sm:p-10">
+          <p class="text-sm font-semibold text-purple-700">REFRIGERAÇÃO E ORGANIZAÇÃO</p>
+          <h2 class="mt-3 text-2xl font-bold text-purple-950">Cuide de cada detalhe do setup.</h2>
+          <p class="mt-3 max-w-xl">Conheça nossas opções de ventoinhas, water cooler e gabinete gamer.</p>
+        </div>
+        <div data-slide role="group" aria-label="3 de 3" aria-hidden="true" class="min-w-full shrink-0 p-7 sm:p-10">
+          <p class="text-sm font-semibold text-purple-700">ESCOLHA COM CONFIANÇA</p>
+          <h2 class="mt-3 text-2xl font-bold text-purple-950">Planeje uma montagem compatível.</h2>
+          <p class="mt-3 max-w-xl">Confira a tabela de compatibilidade e reúna as informações para seu orçamento.</p>
+        </div>
+      </div>
+      <div class="flex items-center justify-between gap-3 border-t border-purple-200 bg-white px-5 py-4">
+        <button id="slide-anterior" type="button" class="rounded-lg border border-purple-300 px-3 py-2 text-sm font-medium text-purple-900">Anterior</button>
+        <div class="flex gap-3" aria-label="Escolher destaque">
+          <button data-ir-slide="0" type="button" aria-label="Mostrar slide 1" aria-current="true" class="h-4 w-4 rounded-full bg-purple-700"></button>
+          <button data-ir-slide="1" type="button" aria-label="Mostrar slide 2" aria-current="false" class="h-4 w-4 rounded-full bg-purple-200"></button>
+          <button data-ir-slide="2" type="button" aria-label="Mostrar slide 3" aria-current="false" class="h-4 w-4 rounded-full bg-purple-200"></button>
+        </div>
+        <button id="slide-proximo" type="button" class="rounded-lg border border-purple-300 px-3 py-2 text-sm font-medium text-purple-900">Próximo</button>
+      </div>
+    </section>
+
+    
+    <section id="catalogo" aria-labelledby="titulo-catalogo" class="mt-14 scroll-mt-5">
+      <h2 id="titulo-catalogo" class="text-2xl font-bold text-purple-950">Catálogo de componentes</h2>
+      <p class="mt-2 text-slate-600">Conheça as peças e adicione sua escolha ao orçamento.</p>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <article data-produto="p1" class="flex flex-col rounded-xl border border-slate-200 bg-white p-5">
+          <img src="../recursos/imagens/processador-intel-core-i7.jpg" alt="Embalagem do processador Intel Core i7" class="h-48 w-full object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-semibold">Processador Intel Core i7</h3>
+          <p data-descricao class="mt-2 grow text-sm text-slate-600">Desempenho para seu computador. Confira o modelo e o socket da placa-mãe.</p>
+          <p data-preco class="mt-4 font-bold text-purple-900">Valor: R$ 1.299,90</p>
+          <button type="button" class="mt-4 rounded-lg bg-purple-800 px-4 py-2 font-medium text-white hover:bg-purple-950">Detalhes</button>
+        </article>
+        <article data-produto="p2" class="flex flex-col rounded-xl border border-slate-200 bg-white p-5">
+          <img src="../recursos/imagens/kit-ventoinhas-rgb.jpg" alt="Kit de ventoinhas com iluminação RGB" class="h-48 w-full object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-semibold">Kit de ventoinhas RGB</h3>
+          <p data-descricao class="mt-2 grow text-sm text-slate-600">Ventilação e iluminação para o gabinete. Confira as medidas e os conectores.</p>
+          <p data-preco class="mt-4 font-bold text-purple-900">Valor: R$ 129,90</p>
+          <button type="button" class="mt-4 rounded-lg bg-purple-800 px-4 py-2 font-medium text-white hover:bg-purple-950">Detalhes</button>
+        </article>
+        <article data-produto="p3" class="flex flex-col rounded-xl border border-slate-200 bg-white p-5">
+          <img src="../recursos/imagens/placa-mae.jpg" alt="Placa-mãe para computador" class="h-48 w-full object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-semibold">Placa-mãe</h3>
+          <p data-descricao class="mt-2 grow text-sm text-slate-600">A base da montagem. Verifique o socket, a memória e o formato do gabinete.</p>
+          <p data-preco class="mt-4 font-bold text-purple-900">Valor: R$ 899,90</p>
+          <button type="button" class="mt-4 rounded-lg bg-purple-800 px-4 py-2 font-medium text-white hover:bg-purple-950">Detalhes</button>
+        </article>
+        <article data-produto="p4" class="flex flex-col rounded-xl border border-slate-200 bg-white p-5">
+          <img src="../recursos/imagens/fonte-atx.jpg" alt="Fonte de alimentação ATX" class="h-48 w-full object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-semibold">Fonte ATX</h3>
+          <p data-descricao class="mt-2 grow text-sm text-slate-600">Energia para os componentes. Confira a potência necessária e as conexões.</p>
+          <p data-preco class="mt-4 font-bold text-purple-900">Valor: R$ 349,90</p>
+          <button type="button" class="mt-4 rounded-lg bg-purple-800 px-4 py-2 font-medium text-white hover:bg-purple-950">Detalhes</button>
+        </article>
+        <article data-produto="p5" class="flex flex-col rounded-xl border border-slate-200 bg-white p-5">
+          <img src="../recursos/imagens/memoria-ram.jpg" alt="Módulos de memória RAM" class="h-48 w-full object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-semibold">Memória RAM</h3>
+          <p data-descricao class="mt-2 grow text-sm text-slate-600">Mais espaço para suas tarefas. Confira o padrão e a frequência suportados.</p>
+          <p data-preco class="mt-4 font-bold text-purple-900">Valor: R$ 199,90</p>
+          <button type="button" class="mt-4 rounded-lg bg-purple-800 px-4 py-2 font-medium text-white hover:bg-purple-950">Detalhes</button>
+        </article>
+        <article data-produto="p6" class="flex flex-col rounded-xl border border-slate-200 bg-white p-5">
+          <img src="../recursos/imagens/water-cooler-rgb.jpg" alt="Water cooler com ventoinhas RGB" class="h-48 w-full object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-semibold">Water cooler RGB</h3>
+          <p data-descricao class="mt-2 grow text-sm text-slate-600">Refrigeração para o processador. Verifique o socket e o espaço do radiador.</p>
+          <p data-preco class="mt-4 font-bold text-purple-900">Valor: R$ 399,90</p>
+          <button type="button" class="mt-4 rounded-lg bg-purple-800 px-4 py-2 font-medium text-white hover:bg-purple-950">Detalhes</button>
+        </article>
+        <article data-produto="p7" class="flex flex-col rounded-xl border border-slate-200 bg-white p-5">
+          <img src="../recursos/imagens/gabinete-gamer.jpg" alt="Gabinete gamer com computador montado" class="h-48 w-full object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-semibold">Gabinete gamer</h3>
+          <p data-descricao class="mt-2 grow text-sm text-slate-600">Organização para seu setup. Confira os formatos de placa-mãe e o espaço interno.</p>
+          <p data-preco class="mt-4 font-bold text-purple-900">Valor: R$ 499,90</p>
+          <button type="button" class="mt-4 rounded-lg bg-purple-800 px-4 py-2 font-medium text-white hover:bg-purple-950">Detalhes</button>
+        </article>
+      </div>
+    </section>
+
+    
+    <section id="compatibilidade" aria-labelledby="titulo-compatibilidade" class="mt-14 scroll-mt-5">
+      <h2 id="titulo-compatibilidade" class="text-2xl font-bold text-purple-950">Compatibilidade das peças</h2>
+      <p class="mt-2 text-slate-600">Confira os requisitos de cada componente antes da montagem.</p>
+      <div class="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white" tabindex="0" role="region" aria-label="Tabela de compatibilidade com rolagem horizontal">
+        <table class="w-full min-w-[640px] border-collapse text-left text-sm">
+          <caption class="sr-only">Componentes, requisitos de compatibilidade e conferências recomendadas</caption>
+          <thead class="bg-purple-900 text-white">
+            <tr><th scope="col" class="p-4">Componente</th><th scope="col" class="p-4">Compatibilidade</th><th scope="col" class="p-4">O que conferir</th></tr>
+          </thead>
+          <tbody>
+            <tr class="odd:bg-purple-50"><th scope="row" class="p-4 font-medium">Processador Intel Core i7</th><td class="p-4">Socket e chipset</td><td class="p-4">Modelo exato e suporte da placa-mãe.</td></tr>
+            <tr class="odd:bg-purple-50"><th scope="row" class="p-4 font-medium">Kit de ventoinhas RGB</th><td class="p-4">Gabinete e conectores</td><td class="p-4">Dimensões, alimentação e controle RGB.</td></tr>
+            <tr class="odd:bg-purple-50"><th scope="row" class="p-4 font-medium">Placa-mãe</th><td class="p-4">Processador, RAM e gabinete</td><td class="p-4">Socket, tipo de memória e formato.</td></tr>
+            <tr class="odd:bg-purple-50"><th scope="row" class="p-4 font-medium">Fonte ATX</th><td class="p-4">Consumo e conectores</td><td class="p-4">Potência necessária e espaço no gabinete.</td></tr>
+            <tr class="odd:bg-purple-50"><th scope="row" class="p-4 font-medium">Memória RAM</th><td class="p-4">Placa-mãe e processador</td><td class="p-4">Padrão, frequência e capacidade máxima.</td></tr>
+            <tr class="odd:bg-purple-50"><th scope="row" class="p-4 font-medium">Water cooler RGB</th><td class="p-4">Socket e gabinete</td><td class="p-4">Suporte de montagem e espaço do radiador.</td></tr>
+            <tr class="odd:bg-purple-50"><th scope="row" class="p-4 font-medium">Gabinete gamer</th><td class="p-4">Formato e dimensões das peças</td><td class="p-4">Placa-mãe, placa de vídeo e refrigeração.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    
+    <section id="orcamento" aria-labelledby="titulo-orcamento" class="mt-14 scroll-mt-5 rounded-2xl border border-purple-200 bg-white p-6 sm:p-8">
+      <h2 id="titulo-orcamento" class="text-2xl font-bold text-purple-950">Prepare seu orçamento</h2>
+      <p class="mt-2 text-slate-600">Preencha seus dados e conte o que você precisa para o seu computador.</p>
+      <form id="formulario-orcamento" class="mt-6 grid gap-5 sm:grid-cols-2">
+        <div>
+          <label for="nome" class="mb-2 block font-medium">Nome completo</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required class="w-full rounded-lg border border-slate-400 p-3" />
+        </div>
+        <div>
+          <label for="email" class="mb-2 block font-medium">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required class="w-full rounded-lg border border-slate-400 p-3" />
+        </div>
+        <div>
+          <label for="setup" class="mb-2 block font-medium">Seu setup atual ou planejado</label>
+          <input id="setup" name="setup" type="text" required placeholder="Ex.: computador para trabalho e jogos" class="w-full rounded-lg border border-slate-400 p-3" />
+        </div>
+        <div>
+          <label for="peca" class="mb-2 block font-medium">Peça de interesse</label>
+          <select id="peca" name="peca" required class="appearance-none w-full rounded-lg border border-slate-400 bg-white p-3">
+            <option value="">Selecione uma peça</option>
+            <option value="p1">Processador Intel Core i7</option>
+            <option value="p2">Kit de ventoinhas RGB</option>
+            <option value="p3">Placa-mãe</option>
+            <option value="p4">Fonte ATX</option>
+            <option value="p5">Memória RAM</option>
+            <option value="p6">Water cooler RGB</option>
+            <option value="p7">Gabinete gamer</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="mensagem" class="mb-2 block font-medium">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Conte suas necessidades e dúvidas sobre a montagem." class="w-full rounded-lg border border-slate-400 p-3"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <button type="submit" class="rounded-lg bg-purple-800 px-5 py-3 font-semibold text-white hover:bg-purple-950">Revisar orçamento</button>
+          <p id="retorno-orcamento" role="status" class="mt-3 font-medium text-purple-900"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="mt-6 bg-purple-950 px-5 py-7 text-center text-sm text-white">
+    <p class="font-semibold">Thiago Informática</p>
+    <p class="mt-1">Componentes e soluções para o seu computador.</p>
+  </footer>
+
+  
+  <dialog id="modal-produto" aria-labelledby="titulo-modal-produto" aria-describedby="descricao-modal-produto" class="m-auto max-h-[90vh] w-11/12 max-w-lg overflow-y-auto rounded-2xl bg-white p-0 text-slate-800 shadow-xl">
+    <div class="p-6">
+      <div class="flex items-start justify-between gap-4">
+        <h2 id="titulo-modal-produto" class="text-xl font-bold text-purple-950"></h2>
+        <button id="fechar-modal-produto" type="button" class="rounded-lg border border-slate-300 px-3 py-2 text-sm" autofocus>Fechar</button>
+      </div>
+      <img id="imagem-modal-produto" alt="" class="mt-5 h-52 w-full object-contain" />
+      <p id="descricao-modal-produto" class="mt-4 text-slate-600"></p>
+      <p id="preco-modal-produto" class="mt-4 text-lg font-bold text-purple-900"></p>
+      <button id="orcamento-produto" type="button" class="mt-5 w-full rounded-lg bg-purple-800 px-4 py-3 font-semibold text-white hover:bg-purple-950">Adicionar ao orçamento</button>
+    </div>
+  </dialog>
+</body>
+</html>
+

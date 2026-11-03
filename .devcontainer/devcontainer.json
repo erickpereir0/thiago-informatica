@@ -1,0 +1,16 @@
+{
+  "name": "Thiago Informática · Live Server",
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "forwardPorts": [5500],
+  "portsAttributes": {
+    "5500": {
+      "label": "Prévia Thiago Informática",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ritwickdey.LiveServer", "MS-CEINTL.vscode-language-pack-pt-BR"]
+    }
+  }
+}
